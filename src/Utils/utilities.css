@@ -1,0 +1,33 @@
+.bg-radient{
+    background-color:var(--bg-radient);
+}
+.bg-theme{
+    background-color: var(--theme-color);
+}
+.txt-theme{
+    color:var(--theme-color);
+}
+.txt-gray{
+    color:var(--txt-gray);
+}
+.txt-white{
+    color:var(--txt-white);
+}
+.theme-shade-2{
+    color:var(--theme-shade-2);
+}
+.bg-theme-shade-2{
+    background-color: var(--theme-shade-2);
+}
+.l-height-lg{
+    line-height: 1.5;
+}
+.bd-bottom{
+    border-bottom: 2px solid var(--theme-color);
+}
+.l-through{
+    text-decoration: line-through;
+}
+.txt-normal{
+    font-weight:normal;
+}
