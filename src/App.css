@@ -1,0 +1,84 @@
+@import url("./Utils/utilities.css");
+
+:root {
+  --bg-radient: radial-gradient(#fff, #ffd6d6);
+  --theme-color: #ff523b;
+  --theme-shade-2: #563434;
+  --theme-shade-3: rgb(160, 69, 27);
+  --txt-gray: #555;
+  --txt-white: #fff;
+  --border-shade: lightpink;
+}
+body {
+  background: var(--bg-radient);
+}
+.App {
+  /* text-align: center; */
+  height: 100vh;
+}
+
+/* for heading with highlighted underline */
+.title {
+  margin: 5rem;
+  position: relative;
+  line-height: 3.3rem;
+}
+.title::after {
+  content: "";
+  background: var(--theme-color);
+  width: 5rem;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* overriding style from component library */
+
+.card {
+  padding: 0;
+  box-shadow: 0 0 0.8rem var(--txt-gray);
+  border: none;
+}
+
+.badge-icon {
+  font-size: 0.6rem;
+  padding: 2px 5px;
+  top: -0.9rem;
+  left: -0.5rem;
+}
+.footer {
+  background-color: unset;
+  background: rgb(25, 25, 25);
+}
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  border: none;
+}
+.rating-block {
+  background-color: rgb(209, 194, 194);
+}
+
+.btn-dismiss {
+  border: none;
+  top: -10px;
+  right: -9px;
+}
+.main-container {
+  min-height: 80vh;
+}
+
+/* body scrollbar */
+body::-webkit-scrollbar-thumb {
+  background-color: var(--theme-color);
+  border-radius: 12px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-shade-3);
+}
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
