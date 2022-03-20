@@ -1,3 +1,6 @@
+import axios from "axios";
+import { useState, useEffect } from "react";
+
 export const UseGetAxios = (api, encodedToken) => {
     const [isLoading, setIsLoading] = useState(true);
     const [serverData, setServerData] = useState({});
@@ -7,11 +10,12 @@ export const UseGetAxios = (api, encodedToken) => {
             setIsLoading(true);
             if (encodedToken) {
                 let { data } = await axios.get(api, { headers: { authorization: encodedToken } });
+                setServerData(data);
             }
             else {
                 let { data } = await axios.get(api);
+                setServerData(data);
             }
-            setServerData(data);
         } catch (err) {
             setServerError(err);
         } finally {

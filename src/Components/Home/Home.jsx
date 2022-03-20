@@ -1,7 +1,7 @@
 
 import homeImg from "../../assets/fit.png"
 import "./home.css"
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 import CategoryCard from "./CategoryCard"
 import { UseGetAxios } from "../../Utils/UseGetAxios"
 import { useDocumentTitle } from "../../Utils/useDocumentTitle"
@@ -19,8 +19,8 @@ export function Home() {
                     <p className="heading-5 txt-gray l-height-lg">Welcome to Pure Fitness. We deliver best products for your fitness
                         journey. <br />All products needed for your journey are available within us <br />with affordable prices.
                     </p>
-                    <NavLink to="/products" className="link btn bg-theme txt-white">Shop Now
-                        &#8594;</NavLink>
+                    <Link to="/products" className="link btn bg-theme txt-white">Shop Now
+                        &#8594;</Link>
                 </div>
                 <img className="home-image" src={homeImg} alt="logo" />
             </section>
