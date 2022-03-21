@@ -3,8 +3,8 @@ import homeImg from "../../assets/fit.png"
 import "./home.css"
 import { Link } from "react-router-dom"
 import CategoryCard from "./CategoryCard"
-import { UseGetAxios } from "../../Utils/UseGetAxios"
-import { useDocumentTitle } from "../../Utils/useDocumentTitle"
+import { UseGetAxios } from "../../Hooks/UseGetAxios"
+import { useDocumentTitle } from "../../Hooks/useDocumentTitle"
 
 export function Home() {
 
