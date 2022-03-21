@@ -1,0 +1,22 @@
+.nav {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: #ffd6ff;
+  z-index: 1;
+  border: none;
+  border-radius: unset;
+}
+.nav-btn > i {
+  color: var(--theme-color);
+}
+
+.list-item {
+  border: none;
+}
+.list-item:hover {
+  background-color: unset;
+}
+.list-item > a:hover {
+  font-size: 1.2rem;
+}

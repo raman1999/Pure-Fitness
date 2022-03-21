@@ -1,0 +1,22 @@
+.featured-category {
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 10rem;
+  margin-top: 2rem;
+}
+
+.intro-container > a:hover {
+  font-size: 1rem;
+}
+.sec-introduction {
+  margin-top: 4rem;
+}
+.sec-introduction .btn {
+  width: 10rem;
+}
+.featured-category .link {
+  transition: ease-in 0.25s;
+}
+.featured-category .link:hover {
+  transform: scale(1.1);
+}
