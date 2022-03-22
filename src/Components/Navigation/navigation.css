@@ -2,7 +2,7 @@
   width: 100%;
   position: sticky;
   top: 0;
-  background-color: #ffd6ff;
+  background: linear-gradient(#ffd6d6, rgb(243, 223, 223));
   z-index: 1;
   border: none;
   border-radius: unset;

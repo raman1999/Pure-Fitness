@@ -1,6 +1,8 @@
 .section-login {
   justify-content: space-evenly;
-  margin: 4rem auto;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  background: var(--bg-radient);
 }
 .home-image {
   height: 70vh;

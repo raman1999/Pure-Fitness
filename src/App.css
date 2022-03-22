@@ -9,9 +9,7 @@
   --txt-white: #fff;
   --border-shade: lightpink;
 }
-body {
-  background: var(--bg-radient);
-}
+
 .App {
   /* text-align: center; */
   height: 100vh;
@@ -58,10 +56,6 @@ body {
   margin-top: 1.5rem;
   border: none;
 }
-.rating-block {
-  background-color: rgb(209, 194, 194);
-}
-
 .btn-dismiss {
   border: none;
   top: -10px;
