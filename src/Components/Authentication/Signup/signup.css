@@ -1,0 +1,45 @@
+.section-register {
+  justify-content: space-evenly;
+  margin: 3rem auto;
+  margin-bottom: 6rem;
+}
+/* form container */
+.form-container {
+  height: unset;
+}
+.label {
+  display: inline-block;
+  width: 10rem;
+}
+.submit-container {
+  margin-top: 2rem;
+}
+.submit-container > p {
+  margin-top: 1rem;
+}
+.btn-register {
+  width: 80%;
+  margin: auto;
+}
+.input-container .input-box {
+  display: flex;
+  justify-content: space-between;
+}
+.input-box > span {
+  display: flex;
+  flex-direction: column;
+  max-width: 20rem;
+}
+.input-password-field {
+  position: relative;
+}
+.input-password-field input {
+  padding-right: 0.5rem;
+}
+.eye-icon {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.7rem;
+  font-size: 1.2rem;
+  color: var(--grey);
+}
