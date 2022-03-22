@@ -9,7 +9,7 @@
   font-size: 1rem;
 }
 .sec-introduction {
-  margin-top: 4rem;
+  background: var(--bg-radient);
 }
 .sec-introduction .btn {
   width: 10rem;

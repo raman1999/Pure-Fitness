@@ -1,7 +1,8 @@
 .section-register {
   justify-content: space-evenly;
-  margin: 3rem auto;
-  margin-bottom: 6rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: var(--bg-radient);
 }
 /* form container */
 .form-container {
