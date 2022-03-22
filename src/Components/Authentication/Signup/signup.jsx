@@ -51,7 +51,7 @@ export function Signup() {
           }
         }
         catch (err) {
-          setError("serverError", "Can't connect to server ! Try again later")
+          err.response.status === 422 ? setError("serverError", "Email already exists") : setError("serverError", "Can't connect to server ! Try again later")
         }
       })();
     }
