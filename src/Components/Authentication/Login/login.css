@@ -1,0 +1,34 @@
+.section-login {
+  justify-content: space-evenly;
+  margin: 4rem auto;
+}
+.home-image {
+  height: 70vh;
+}
+.form-container {
+  padding: 1rem 2rem;
+  border: 1px solid lightgrey;
+  background-color: var(--txt-white);
+  justify-content: space-between;
+}
+
+.section-login .form-container {
+  height: 60vh;
+}
+.section-login .btn {
+  width: 100%;
+}
+.input-box {
+  margin: 1.3rem 0;
+}
+
+.form-container .txt-input {
+  padding: 0.6rem;
+  width: 20rem;
+}
+.form-container .title {
+  margin: unset;
+}
+.login-txt {
+  margin-top: 0.8rem;
+}
