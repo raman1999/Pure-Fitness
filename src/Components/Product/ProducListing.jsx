@@ -16,7 +16,6 @@ export function ProductListing() {
   } = UseGetAxios("api/products");
 
   useEffect(() => {
-    console.log("running");
     filterDispatch({ type: "SET_PRODUCTS", payload: products });
   }, [products]);
 

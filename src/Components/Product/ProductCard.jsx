@@ -15,7 +15,7 @@ export function ProductCard({ product }) {
   } = product;
 
   return (
-    <div className="card">
+    <div className="card product-card">
       <img className="card-img" src={img} alt="product" />
       <p className="heading-3 l-sp-1 theme-shade-2 txt-bold">{brand}</p>
       <span className="card-desc">{categoryName}</span>
