@@ -1,0 +1,11 @@
+.wishlist-category {
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin-bottom: 8rem;
+  padding-left: 5rem;
+}
+
+.btn-dismiss:hover {
+  color: var(--theme-color);
+  font-weight: bold;
+}
