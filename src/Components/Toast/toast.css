@@ -1,0 +1,20 @@
+/* Toast Component */
+.toast-container {
+  display: flex;
+  box-shadow: unset;
+  border-color: var(--bgSuccess);
+  height: 4rem;
+  width: 15rem;
+  color: var(--bgSuccess);
+  font-size: 0.85em;
+  z-index: 1;
+}
+
+.toast-message {
+  padding: 0.2rem 1rem;
+  font-size: 1em;
+}
+.toast-container > .btn-dismiss {
+  top: 2px;
+  right: 3px;
+}
