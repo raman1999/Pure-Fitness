@@ -6,8 +6,6 @@ export function userReducer(state, { type, payload }) {
       return { ...state, wishlistItems: payload };
 
     case "UPDATE_CART":
-      console.log(payload.cart);
-
       return { ...state, toastMsg: payload.toastMsg, cartItems: payload.cart };
     case "UPDATE_WISHLIST":
       return {

@@ -1,9 +1,10 @@
-export { Navbar } from './Navigation/Navigation';
-export { Footer } from './Footer/Footer';
-export { Home } from './Home/Home';
+export { Navbar } from "./Navigation/Navigation";
+export { Footer } from "./Footer/Footer";
+export { Home } from "./Home/Home";
 export { Login } from "./Authentication/Login/login";
-export { Signup } from "./Authentication/Signup/signup"
-export { ProductListing } from './Product/ProducListing';
+export { Signup } from "./Authentication/Signup/signup";
+export { ProductListing } from "./Product/ProducListing";
 export { Cart } from "./Cart/Cart";
 export { WishList } from "./Wishlist/WishList";
-export { NotFound } from "./NotFound/NotFound"
+export { NotFound } from "./NotFound/NotFound";
+export { Toast } from "./Toast/toast";

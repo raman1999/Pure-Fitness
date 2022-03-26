@@ -5,7 +5,7 @@ export function CartItem({ cartItem, userDispatch }) {
   const { img, price, brand, rating, originalPrice, categoryName, qty } =
     cartItem;
   const {
-    userState: { wishlistItems, toasMsg },
+    userState: { wishlistItems, toastMsg },
   } = useUserContext();
 
   return (
@@ -35,7 +35,7 @@ export function CartItem({ cartItem, userDispatch }) {
             onClick={() =>
               updateCart("DECREMENT_FROM_CART", cartItem, userDispatch)
             }
-            disabled={qty === 1 || toasMsg}
+            disabled={qty === 1 || toastMsg}
           ></button>
 
           <button className="txt-center txt-bold theme-shade-2 ">{qty}</button>
@@ -45,7 +45,7 @@ export function CartItem({ cartItem, userDispatch }) {
             onClick={() =>
               updateCart("INCREMENT_FROM_CART", cartItem, userDispatch)
             }
-            disabled={toasMsg}
+            disabled={toastMsg}
           ></button>
         </div>
         <button
@@ -58,7 +58,7 @@ export function CartItem({ cartItem, userDispatch }) {
               userDispatch
             )
           }
-          disabled={toasMsg}
+          disabled={toastMsg}
         >
           {" "}
           <i className="fas fa-heart"></i>&nbsp; Move to Wishlist
@@ -68,6 +68,7 @@ export function CartItem({ cartItem, userDispatch }) {
           type="button"
           className="btn txt-white btn-goto-cart"
           onClick={() => updateCart("REMOVE_FROM_CART", cartItem, userDispatch)}
+          disabled={toastMsg}
         >
           {" "}
           <i className="fas fa-shopping-cart"></i>&nbsp; Remove From Cart
