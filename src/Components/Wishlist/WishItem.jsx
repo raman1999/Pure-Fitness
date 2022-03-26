@@ -10,6 +10,7 @@ export default function WishItem({ wishItem, userDispatch }) {
     categoryName,
     stockQuantity,
   } = wishItem;
+  const cardRating = rating >= 3 ? "#26a541" : "#ff6161";
 
   return (
     <div className="card">
@@ -22,10 +23,14 @@ export default function WishItem({ wishItem, userDispatch }) {
           ₹ {originalPrice}
         </span>
       </p>
-      <span className="rating-block theme-shade-2">
-        {rating}
-        <i className="fa fa-star fa-md rating-checked"></i>
-      </span>
+      <div>
+        <span
+          className="rating-block txt-white"
+          style={{ backgroundColor: cardRating }}
+        >
+          {rating} <i className="fa fa-star"></i>
+        </span>
+      </div>
       <AddToCart product={wishItem} />
       {stockQuantity === 0 && (
         <div className="out-stock-container">

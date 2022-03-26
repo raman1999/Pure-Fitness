@@ -11,7 +11,6 @@
 }
 
 .App {
-  /* text-align: center; */
   height: 100vh;
 }
 
@@ -46,6 +45,8 @@
   padding: 2px 5px;
   top: -0.9rem;
   left: -0.5rem;
+  background-color: var(--theme-color);
+  color: var(--txt-white);
 }
 .footer {
   background-color: unset;
@@ -55,6 +56,12 @@
   display: inline-block;
   margin-top: 1.5rem;
   border: none;
+}
+.rating-block {
+  padding: 2px 7px;
+  border-radius: 14px;
+  font-size: 0.8rem;
+  vertical-align: baseline;
 }
 .btn-dismiss {
   border: none;
