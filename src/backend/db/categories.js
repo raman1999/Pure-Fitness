@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid';
+import { v4 as uuid } from "uuid";
 
 /**
  * Category Database can be added here.
@@ -8,20 +8,22 @@ import { v4 as uuid } from 'uuid';
 export const categories = [
   {
     _id: uuid(),
-    categoryName: 'fiction',
-    description:
-      'literature in the form of prose, especially novels, that describes imaginary events and people',
+    categoryName: "Whey Protein",
+    img: "https://rukminim2.flixcart.com/image/612/612/l0sgyvk0/protein-supplement/b/g/x/whey-protein-iso100-hydrolized-protein-powder-63-ser-2-3kg-5lbs-original-imagcg3ah94anqhn.jpeg?q=70",
   },
   {
     _id: uuid(),
-    categoryName: 'non-fiction',
-    description:
-      'Non-fiction is writing that gives information or describes real events, rather than telling a story.',
+    categoryName: "PreWorkout",
+    img: "https://rukminim2.flixcart.com/image/612/612/jzu60sw0/vitamin-supplement/n/t/y/390-c4-original-pre-workout-icy-blue-razz-60-servings-cellucor-original-imafdzqzheanqqeh.jpeg?q=70",
   },
   {
     _id: uuid(),
-    categoryName: 'horror',
-    description:
-      'Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.',
+    categoryName: "Mass Gainer",
+    img: "https://m.media-amazon.com/images/I/31NIEZqxwBS._AC_UL480_FMwebp_QL65_.jpg",
+  },
+  {
+    _id: uuid(),
+    categoryName: "BCAAs",
+    img: "https://rukminim2.flixcart.com/image/612/612/kbv4fww0/protein-supplement/j/x/u/real-bmnbcaa01-bigmuscles-nutrition-original-imaft4cqznjzshme.jpeg?q=70",
   },
 ];
