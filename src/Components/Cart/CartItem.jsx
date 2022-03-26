@@ -7,7 +7,7 @@ export function CartItem({ cartItem, userDispatch }) {
   const {
     userState: { wishlistItems, toastMsg },
   } = useUserContext();
-
+  const cardRating = rating >= 3 ? "#26a541" : "#ff6161";
   return (
     <div className="card-horizontal">
       <img className="card-img" alt="card" src={img} />
@@ -17,7 +17,7 @@ export function CartItem({ cartItem, userDispatch }) {
         <div>
           <span
             className="rating-block txt-white"
-            style={{ backgroundColor: rating >= 3 ? "#26a541" : "#ff6161" }}
+            style={{ backgroundColor: cardRating }}
           >
             {rating} <i className="fa fa-star"></i>
           </span>

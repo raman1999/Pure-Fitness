@@ -10,6 +10,7 @@ export default function WishItem({ wishItem, userDispatch }) {
     categoryName,
     stockQuantity,
   } = wishItem;
+  const cardRating = rating >= 3 ? "#26a541" : "#ff6161";
 
   return (
     <div className="card">
@@ -25,7 +26,7 @@ export default function WishItem({ wishItem, userDispatch }) {
       <div>
         <span
           className="rating-block txt-white"
-          style={{ backgroundColor: rating >= 3 ? "#26a541" : "#ff6161" }}
+          style={{ backgroundColor: cardRating }}
         >
           {rating} <i className="fa fa-star"></i>
         </span>
