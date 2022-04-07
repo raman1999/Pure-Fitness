@@ -1,6 +1,5 @@
 @import url("./Utils/utilities.css");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comfortaa:wght@700&family=Rowdies:wght@300&display=swap");
-/* @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Nunito&family=Permanent+Marker&family=Poppins&family=RowdieNinis&display=swap"); */
 :root {
   --bg-radient: radial-gradient(#fff, #ffd6d6);
   --theme-color: #ff523b;
