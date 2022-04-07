@@ -6,6 +6,7 @@ import { ProductCard } from "./ProductCard";
 import "./products.css";
 import { LoadingSpinner } from "../../Utils";
 import { UseGetAxios } from "../../Hooks/UseGetAxios";
+import { useDocumentTitle } from "../../Hooks/useDocumentTitle";
 
 export function ProductListing() {
   const { filterState, filterDispatch } = useFilterContext();
@@ -14,7 +15,7 @@ export function ProductListing() {
     serverData: { products },
     isLoading,
   } = UseGetAxios("api/products");
-
+  useDocumentTitle("Products | PureFitness");
   useEffect(() => {
     filterDispatch({ type: "SET_PRODUCTS", payload: products });
   }, [products]);

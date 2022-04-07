@@ -6,7 +6,6 @@ import {
   useUserContext,
   useFilterContext,
 } from "../../Context";
-import logo from "../../assets/logo-img2.png";
 
 export function Navbar() {
   const [searchValue, setSearchValue] = useState("");
@@ -37,7 +36,6 @@ export function Navbar() {
       <nav className="nav bg-radient">
         <div className="nav-logo">
           <NavLink to="/" className="link">
-            {/* <img src={logo} width="150" height="100" /> */}
             <span className="nav-header l-sp-1 theme-shade-2">
               Pure<span className="txt-theme txt-bold">Fitness</span>
             </span>

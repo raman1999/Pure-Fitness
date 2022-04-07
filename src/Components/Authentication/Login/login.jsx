@@ -6,6 +6,7 @@ import PasswordField from "../PasswordField";
 import { useNavigate } from "react-router-dom";
 import { useAuthenticationContext, useUserContext } from "../../../Context";
 import axios from "axios";
+import { useDocumentTitle } from "../../../Hooks/useDocumentTitle";
 
 export function Login() {
   const initialFormData = { email: "", password: "" };
@@ -17,6 +18,7 @@ export function Login() {
   const { userDispatch } = useUserContext();
   const { email, password } = loginForm;
 
+  useDocumentTitle("Login | PureFitness");
   useEffect(() => {
     if (testUser) loginSubmitHandler();
   }, [testUser, loginForm]);

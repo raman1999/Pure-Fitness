@@ -8,6 +8,7 @@ import PasswordField from "../PasswordField";
 import { signupValidationHandler } from "./signupValidation";
 import { useAuthenticationContext } from "../../../Context/AuthenticationProvider";
 import { useUserContext } from "../../../Context";
+import { useDocumentTitle } from "../../../Hooks/useDocumentTitle";
 
 export function Signup() {
   const initialFormData = {
@@ -38,6 +39,8 @@ export function Signup() {
   const navigate = useNavigate();
   const { setLogin } = useAuthenticationContext();
   const { userDispatch } = useUserContext();
+  useDocumentTitle("Signup | PureFitness");
+
   function formHandler(e) {
     const { name, value } = e.target;
     if (name === "confirmPassword" && signupForm.password !== value)

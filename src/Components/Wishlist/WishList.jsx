@@ -1,9 +1,10 @@
 import { useUserContext } from "../../Context/UserDataProvider";
+import { useDocumentTitle } from "../../Hooks/useDocumentTitle";
 import WishItem from "./WishItem";
 import "./wishlist.css";
 export function WishList() {
   const { userState, userDispatch } = useUserContext();
-
+  useDocumentTitle("Wishlist | PureFitness");
   return (
     <>
       <h2 className="title txt-center txt-theme txt-gray">
