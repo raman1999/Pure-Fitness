@@ -18,9 +18,6 @@
   left: 1%;
   border: none;
   border-right: 1px solid rgba(0, 0, 0, 0.25);
-  /* border-right-color: var(--theme-shade-3); */
-  /* border-left: unset;
-  border-top: unset; */
 }
 .btn-clear {
   align-self: center;
@@ -52,9 +49,7 @@ input[type="checkbox"] {
   gap: 1rem;
   margin-bottom: 5rem;
 }
-/* .product-card {
-  box-shadow: 0 0 0.4rem var(--txt-gray);
-} */
+
 .product-list-header {
   background-color: rgba(0, 0, 0, 0.08);
   font-size: 1.1rem;

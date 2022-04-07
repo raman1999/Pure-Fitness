@@ -13,6 +13,7 @@
 }
 .sec-introduction {
   background: var(--bg-radient);
+  padding: 2rem 1.1rem;
 }
 .sec-introduction .btn {
   width: 10rem;

@@ -1,7 +1,7 @@
 .section-register {
   justify-content: space-evenly;
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
   background: var(--bg-radient);
 }
 /* form container */
@@ -43,4 +43,12 @@
   top: 0.7rem;
   font-size: 1.2rem;
   color: var(--grey);
+}
+@media screen and (max-width: 768px) {
+  .section-register .home-image {
+    display: none;
+  }
+  .section-register .input-box {
+    flex-direction: column;
+  }
 }

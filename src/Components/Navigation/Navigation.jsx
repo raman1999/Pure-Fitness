@@ -41,10 +41,6 @@ export function Navbar() {
             </span>
           </NavLink>
         </div>
-        <span className="nav-btn">
-          <i className="fas fa-bars fa-lg"></i>
-        </span>
-
         <div className="txt-box pos-relative">
           <input
             className="txt-input"

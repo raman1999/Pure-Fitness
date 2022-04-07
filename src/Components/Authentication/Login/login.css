@@ -1,7 +1,7 @@
 .section-login {
   justify-content: space-evenly;
   padding-top: 4rem;
-  padding-bottom: 3rem;
+  padding-bottom: 6rem;
   background: var(--bg-radient);
 }
 .home-image {
@@ -39,4 +39,12 @@
 .btn-test-user:hover {
   background-color: var(--theme-color);
   color: var(--txt-white);
+}
+@media screen and (max-width: 768px) {
+  .section-login .home-image {
+    display: none;
+  }
+  .section-login {
+    padding-bottom: 10rem;
+  }
 }
