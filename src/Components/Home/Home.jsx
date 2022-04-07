@@ -24,7 +24,7 @@ export function Home() {
         <>
           <section className="sec-introduction txt-center flex-column">
             <div className="intro-container">
-              <h1 className="l-sp-2">
+              <h1 className="l-sp-2 intro-heading">
                 Give Your Workout A <br /> New Style!{" "}
               </h1>
               <p className="heading-5 txt-gray l-height-lg">

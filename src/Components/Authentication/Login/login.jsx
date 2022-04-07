@@ -1,40 +1,60 @@
 import { Link } from "react-router-dom";
 import home from "../../../assets/home.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./login.css";
 import PasswordField from "../PasswordField";
 import { useNavigate } from "react-router-dom";
-import { useAuthenticationContext } from "../../../Context";
+import { useAuthenticationContext, useUserContext } from "../../../Context";
 import axios from "axios";
 
 export function Login() {
   const initialFormData = { email: "", password: "" };
   const navigate = useNavigate();
   const { setLogin } = useAuthenticationContext();
-
+  const [testUser, setTestUser] = useState(false);
   const [loginForm, setLoginForm] = useState(initialFormData);
   const [errorData, setErrorData] = useState("");
+  const { userDispatch } = useUserContext();
   const { email, password } = loginForm;
+
+  useEffect(() => {
+    if (testUser) loginSubmitHandler();
+  }, [testUser, loginForm]);
 
   function loginFormHandler(e) {
     const { name, value } = e.target;
     if (errorData) setErrorData("");
-
     setLoginForm((oldFormData) => ({ ...oldFormData, [name]: value }));
   }
 
+  function testUserHandler() {
+    setLoginForm((prev) => ({
+      ...prev,
+      email: "ramanjoshi1999@gmail.com",
+      password: "Raman@123",
+    }));
+    setTestUser(true);
+  }
+
   function loginSubmitHandler(e) {
-    e.preventDefault();
+    e?.preventDefault();
 
     (async () => {
       try {
-        const {
-          data: { encodedToken },
-        } = await axios.post("api/auth/login", { email, password });
-        if (encodedToken) {
-          localStorage.setItem("token", encodedToken);
+        const { data } = await axios.post("/api/auth/login", {
+          email,
+          password,
+        });
+        if (data.encodedToken) {
+          localStorage.setItem("token", data.encodedToken);
           setLogin(true);
+          userDispatch({
+            type: "SHOW_TOAST",
+            payload: "Logged In Successfully",
+          });
           navigate("/");
+        } else {
+          setErrorData("Email or Password is  invalid");
         }
       } catch (err) {
         err.response.status === 500
@@ -89,6 +109,13 @@ export function Login() {
         <div className="flex-column">
           <button type="submit" className="link btn bg-theme txt-white l-sp-2">
             LOGIN
+          </button>
+          <button
+            type="button"
+            onClick={testUserHandler}
+            className="btn btn-test-user txt-theme l-sp-2"
+          >
+            Login with Test Credential
           </button>
           <p className="login-txt">
             <span className="txt-gray">Not a user yet ? </span>

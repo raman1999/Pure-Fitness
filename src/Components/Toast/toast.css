@@ -1,20 +1,21 @@
 /* Toast Component */
 .toast-container {
   display: flex;
-  box-shadow: unset;
-  border-color: var(--bgSuccess);
-  height: 4rem;
-  width: 15rem;
-  color: var(--bgSuccess);
+  border: none;
+  background: rgba(118, 248, 118, 0.823);
+  min-height: 4rem;
+  max-width: 15rem;
   font-size: 0.85em;
+  box-shadow: 0 0 7px var(--grey);
   z-index: 1;
 }
 
 .toast-message {
   padding: 0.2rem 1rem;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 .toast-container > .btn-dismiss {
   top: 2px;
   right: 3px;
+  background-color: unset;
 }

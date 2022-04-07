@@ -6,6 +6,7 @@ import {
   useUserContext,
   useFilterContext,
 } from "../../Context";
+import logo from "../../assets/logo-img2.png";
 
 export function Navbar() {
   const [searchValue, setSearchValue] = useState("");
@@ -21,6 +22,7 @@ export function Navbar() {
     userDispatch({ type: "SET_CART", payload: [] });
     setLogin(false);
     localStorage.clear();
+    userDispatch({ type: "SHOW_TOAST", payload: "Logged Out Successfully" });
     navigate("/");
   }
   function searchHandler(e) {
@@ -29,21 +31,23 @@ export function Navbar() {
       setSearchValue("");
     }
   }
+
   return (
     <>
       <nav className="nav bg-radient">
         <div className="nav-logo">
           <NavLink to="/" className="link">
+            {/* <img src={logo} width="150" height="100" /> */}
             <span className="nav-header l-sp-1 theme-shade-2">
               Pure<span className="txt-theme txt-bold">Fitness</span>
             </span>
           </NavLink>
         </div>
-        <span id="btn-hamburger" className="nav-btn">
+        <span className="nav-btn">
           <i className="fas fa-bars fa-lg"></i>
         </span>
 
-        <div className="txt-box">
+        <div className="txt-box pos-relative">
           <input
             className="txt-input"
             type="text"
@@ -53,7 +57,7 @@ export function Navbar() {
             onKeyDown={searchHandler}
           />
           <span
-            className="txt-icon bg-theme"
+            className="txt-icon search-icon bg-theme"
             onClick={() => {
               filterDispatch({ type: "SEARCH_PRODUCT", payload: searchValue });
               setSearchValue("");
@@ -65,30 +69,21 @@ export function Navbar() {
 
         <ul id="main-list" className="nav-list nav-list-hide">
           <li className="list-item">
-            {" "}
             <NavLink to="/" className="link theme-shade-2">
               <i className="fas fa-lg fa-home"></i>
             </NavLink>
           </li>
 
-          {!login && (
-            <li className="list-item  txt-bold">
-              <NavLink to="/login" className="link theme-shade-2">
-                <i className="fas fa-lg fa-user "></i>
-              </NavLink>
-            </li>
-          )}
           <li className="list-item  txt-bold">
-            <NavLink to="/products" className="link theme-shade-2">
+            <NavLink to="/products" className={"link theme-shade-2"}>
               <i className="fas fa-lg fa-store "></i>
             </NavLink>
           </li>
 
           <li className="list-item">
-            {" "}
             <NavLink
               to={login ? "/wishlist" : "/login"}
-              className=" link theme-shade-2"
+              className="link theme-shade-2"
             >
               <i className="fas fa-lg fa-heart"></i>
               {wishlistItems.length > 0 && (
@@ -99,7 +94,6 @@ export function Navbar() {
             </NavLink>
           </li>
           <li className="list-item  txt-bold">
-            {" "}
             <NavLink
               to={login ? "/cart" : "/login"}
               className="link theme-shade-2"
@@ -110,17 +104,23 @@ export function Navbar() {
                   {cartItems.length}
                 </span>
               )}
-            </NavLink>{" "}
+            </NavLink>
           </li>
           {login && (
             <li className="list-item  txt-bold">
-              {" "}
               <NavLink to="/login" className="link theme-shade-2">
                 <i
                   className="fas fa-lg fa-sign-out-alt"
                   onClick={logOutHandler}
                 ></i>
-              </NavLink>{" "}
+              </NavLink>
+            </li>
+          )}
+          {!login && (
+            <li className="list-item  txt-bold">
+              <NavLink to="/login" className="link theme-shade-2">
+                <i className="fas fa-lg fa-user "></i>
+              </NavLink>
             </li>
           )}
         </ul>

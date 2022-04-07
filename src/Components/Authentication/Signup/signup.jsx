@@ -7,6 +7,7 @@ import ErrorText from "./ErrorText";
 import PasswordField from "../PasswordField";
 import { signupValidationHandler } from "./signupValidation";
 import { useAuthenticationContext } from "../../../Context/AuthenticationProvider";
+import { useUserContext } from "../../../Context";
 
 export function Signup() {
   const initialFormData = {
@@ -36,7 +37,7 @@ export function Signup() {
   } = errorData;
   const navigate = useNavigate();
   const { setLogin } = useAuthenticationContext();
-
+  const { userDispatch } = useUserContext();
   function formHandler(e) {
     const { name, value } = e.target;
     if (name === "confirmPassword" && signupForm.password !== value)
@@ -80,6 +81,10 @@ export function Signup() {
             localStorage.setItem("token", encodedToken);
             setLogin(true);
             setSignupForm(initialFormData);
+            userDispatch({
+              type: "SHOW_TOAST",
+              payload: "Logged In Successfully",
+            });
             navigate("/");
           }
         } catch (err) {
