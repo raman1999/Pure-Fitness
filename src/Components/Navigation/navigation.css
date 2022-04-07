@@ -6,6 +6,7 @@
   z-index: 1;
   border: none;
   border-radius: unset;
+  max-height: 4rem;
 }
 .nav-btn > i {
   color: var(--theme-color);
@@ -19,4 +20,19 @@
 }
 .list-item > a:hover {
   font-size: 1.2rem;
+}
+.search-icon {
+  position: absolute;
+  right: 0;
+}
+.nav .txt-input {
+  min-width: 15rem;
+}
+@media screen and (max-width: 768px) {
+  .nav {
+    display: flex;
+  }
+  .nav-btn {
+    top: 100%;
+  }
 }

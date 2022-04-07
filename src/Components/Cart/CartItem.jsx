@@ -31,11 +31,15 @@ export function CartItem({ cartItem, userDispatch }) {
         </p>
         <div className="flex-box j-center quantity-box">
           <button
-            className="fas fa-solid fa-minus txt-gray"
+            className={`fas fa-solid txt-gray ${
+              qty === 1 ? "fa-trash" : "fa-minus"
+            }`}
             onClick={() =>
-              updateCart("DECREMENT_FROM_CART", cartItem, userDispatch)
+              qty === 1
+                ? updateCart("REMOVE_FROM_CART", cartItem, userDispatch)
+                : updateCart("DECREMENT_FROM_CART", cartItem, userDispatch)
             }
-            disabled={qty === 1 || toastMsg}
+            disabled={toastMsg}
           ></button>
 
           <button className="txt-center txt-bold theme-shade-2 ">{qty}</button>

@@ -5,6 +5,7 @@
 }
 .cart-category {
   justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 5rem;
 }
 /* different cards category */
@@ -19,14 +20,13 @@
   padding-bottom: 1rem;
   min-width: 20rem;
   border: none;
-  box-shadow: 0 0 2px rgb(80, 80, 80);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.37);
   justify-content: space-around;
 }
 .card-horizontal .card-img {
   padding: 1rem;
   width: 20%;
   min-width: 12rem;
-  /* height: 27vh; */
 }
 .quantity-box {
   gap: 0.5rem;
@@ -52,10 +52,10 @@
 }
 /* cart page checkout category */
 .cart-price {
-  width: 25%;
+  min-width: 23rem;
   height: fit-content;
   background-color: var(--txt-white);
-  box-shadow: 0 0 3px var(--txt-gray);
+  box-shadow: 0 0 2px var(--txt-gray);
 }
 .flex-between {
   display: flex;

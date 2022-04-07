@@ -1,5 +1,6 @@
 @import url("./Utils/utilities.css");
-
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comfortaa:wght@700&family=Rowdies:wght@300&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Nunito&family=Permanent+Marker&family=Poppins&family=RowdieNinis&display=swap"); */
 :root {
   --bg-radient: radial-gradient(#fff, #ffd6d6);
   --theme-color: #ff523b;
@@ -34,12 +35,17 @@
 
 /* overriding style from component library */
 
-.card {
+.card,
+.card-horizontal {
   padding: 0;
-  box-shadow: 0 0 0.8rem var(--txt-gray);
+  box-shadow: 0 0 2px var(--txt-gray);
+  background-color: var(--txt-white);
   border: none;
 }
-
+h2,
+h3 {
+  margin: 0;
+}
 .badge-icon {
   font-size: 0.6rem;
   padding: 2px 5px;
@@ -59,19 +65,30 @@
 }
 .rating-block {
   padding: 2px 7px;
-  border-radius: 14px;
+  border-radius: 8px;
   font-size: 0.8rem;
   vertical-align: baseline;
 }
 .btn-dismiss {
+  background-color: unset;
+  color: var(--theme-color);
+  font-weight: bold;
+  font-size: 1.3rem;
   border: none;
-  top: -10px;
-  right: -9px;
+  top: -9px;
+  right: -5px;
 }
 .main-container {
   min-height: 80vh;
 }
-
+.empty-products {
+  font-size: 1.6rem;
+  margin-top: 6rem;
+  color: var(--txt-gray);
+}
+input:focus {
+  border: 2px solid var(--theme-color) !important;
+}
 /* body scrollbar */
 body::-webkit-scrollbar-thumb {
   background-color: var(--theme-color);
@@ -82,4 +99,10 @@ body::-webkit-scrollbar-thumb:hover {
 }
 body::-webkit-scrollbar {
   width: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
 }

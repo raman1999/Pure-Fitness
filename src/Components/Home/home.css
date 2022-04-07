@@ -4,12 +4,16 @@
   margin-bottom: 10rem;
   margin-top: 2rem;
 }
+.intro-heading {
+  font-family: "Abril Fatface", cursive;
+}
 
 .intro-container > a:hover {
   font-size: 1rem;
 }
 .sec-introduction {
   background: var(--bg-radient);
+  padding: 2rem 1.1rem;
 }
 .sec-introduction .btn {
   width: 10rem;
@@ -19,4 +23,8 @@
 }
 .featured-category .link:hover {
   transform: scale(1.1);
+}
+.home-image {
+  min-width: 50%;
+  filter: drop-shadow(7px 7px 7px var(--txt-gray));
 }

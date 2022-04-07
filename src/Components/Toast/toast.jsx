@@ -12,14 +12,14 @@ export const Toast = () => {
   };
 
   useEffect(() => {
-    const timeID = setTimeout(closeToast, 2000);
+    const timeID = setTimeout(closeToast, 1800);
     return () => clearTimeout(timeID);
   }, [toastMsg]);
 
   return (
     <div className="toast-container">
       <h3 className="toast-message">{toastMsg}</h3>
-      <button className="fa fa-times btn-dismiss"></button>
+      <button onClick={closeToast} className="fa fa-times btn-dismiss"></button>
     </div>
   );
 };
