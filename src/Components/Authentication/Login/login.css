@@ -14,9 +14,6 @@
   justify-content: space-between;
 }
 
-.section-login .form-container {
-  height: 60vh;
-}
 .section-login .btn {
   width: 100%;
 }
@@ -33,4 +30,13 @@
 }
 .login-txt {
   margin-top: 0.8rem;
+}
+.btn-test-user {
+  border: 1px solid var(--theme-color);
+  margin-top: 0;
+  background-color: var(--txt-white);
+}
+.btn-test-user:hover {
+  background-color: var(--theme-color);
+  color: var(--txt-white);
 }
